@@ -1,7 +1,0 @@
-package com.chess.engine.board;
-
-public class Board {
-    public Tile getTile(int candaditaDestinationCoordinate) {
-        return null;
-    }
-}
