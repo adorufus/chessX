@@ -16,6 +16,9 @@ public class Board {
     private final Collection<Piece> whitePiece;
     private final Collection<Piece> blackPiece;
 
+    private final WhitePlayer whitePlayer;
+    private final BlackPlayer blackPlayer;
+
     public Board(Builder builder) {
         this.gameBoard = createGameBoard(builder);
         this.whitePiece = calculateActivePieces(this.gameBoard, Alliance.WHITE);
