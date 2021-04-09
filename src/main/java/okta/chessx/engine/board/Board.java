@@ -3,6 +3,9 @@ package okta.chessx.engine.board;
 import okta.chessx.engine.Alliance;
 import com.google.common.collect.ImmutableList;
 import okta.chessx.engine.pieces.*;
+import okta.chessx.engine.player.BlackPlayer;
+import okta.chessx.engine.player.Player;
+import okta.chessx.engine.player.WhitePlayer;
 
 import java.util.*;
 
@@ -19,6 +22,8 @@ public class Board {
     private final WhitePlayer whitePlayer;
     private final BlackPlayer blackPlayer;
 
+    private final Player currentPlayer;
+
     public Board(Builder builder) {
         this.gameBoard = createGameBoard(builder);
         this.whitePiece = calculateActivePieces(this.gameBoard, Alliance.WHITE);
@@ -26,6 +31,11 @@ public class Board {
 
         final Collection<Move> whiteStandardMoves = calculateLegalMoves(this.whitePiece);
         final Collection<Move> blackStandardMoves = calculateLegalMoves(this.blackPiece);
+        
+        this.whitePlayer = new WhitePlayer(this, whiteStandardMoves, blackStandardMoves);
+        this.blackPlayer = new BlackPlayer(this, whiteStandardMoves, blackStandardMoves);
+
+        this.currentPlayer = null;
     }
 
     @Override
@@ -125,6 +135,26 @@ public class Board {
 
     public Tile getTile(int tileCoordinate) {
         return gameBoard.get(tileCoordinate);
+    }
+
+    public Collection<Piece> getBlackPieces() {
+        return this.blackPiece;
+    }
+
+    public Collection<Piece> getWhitePiece() {
+        return this.whitePiece;
+    }
+
+    public Player whitePlayer() {
+        return this.whitePlayer;
+    }
+
+    public Player blackPlayer() {
+        return this.blackPlayer;
+    }
+
+    public Player currentPlayer() {
+        return this.currentPlayer;
     }
 
     public static class Builder {
