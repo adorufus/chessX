@@ -1,5 +1,6 @@
 package okta.chessx.engine.board;
 
+import com.google.common.collect.Iterables;
 import okta.chessx.engine.Alliance;
 import com.google.common.collect.ImmutableList;
 import okta.chessx.engine.pieces.*;
@@ -11,6 +12,7 @@ import java.util.*;
 
 import static okta.chessx.engine.BoardUtils.NUM_TILES;
 import static okta.chessx.engine.BoardUtils.NUM_TILES_PER_ROW;
+import static okta.chessx.engine.Utils.Print;
 
 public class Board {
 
@@ -24,18 +26,29 @@ public class Board {
 
     private final Player currentPlayer;
 
-    public Board(Builder builder) {
+    public Board(final Builder builder) {
         this.gameBoard = createGameBoard(builder);
         this.whitePiece = calculateActivePieces(this.gameBoard, Alliance.WHITE);
         this.blackPiece = calculateActivePieces(this.gameBoard, Alliance.BLACK);
 
+        Print("\n\n\nCalculate Legal Moves: " + calculateLegalMoves(blackPiece).toString() + "\n\n\n");
+
         final Collection<Move> whiteStandardMoves = calculateLegalMoves(this.whitePiece);
         final Collection<Move> blackStandardMoves = calculateLegalMoves(this.blackPiece);
+
+        Print("\n\n\nWhite Standard Moves: " + whiteStandardMoves.toString());
+        Print("\n\n\nBlack Standard Moves: " + blackStandardMoves.toString());
         
         this.whitePlayer = new WhitePlayer(this, whiteStandardMoves, blackStandardMoves);
         this.blackPlayer = new BlackPlayer(this, whiteStandardMoves, blackStandardMoves);
 
-        this.currentPlayer = null;
+        Print("\n\n\nWhite Player: " + whitePlayer + "\n\n\n");
+        Print("\n\n\nBlack Player: " + blackPlayer + "\n\n\n");
+
+        Print("\n\n\nchoose player: " + builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer).toString() +
+                "\n\n\n");
+
+        this.currentPlayer = builder.nextMoveMaker.choosePlayer(this.whitePlayer, this.blackPlayer);
     }
 
     @Override
@@ -54,9 +67,12 @@ public class Board {
     }
 
     private Collection<Move> calculateLegalMoves(Collection<Piece> pieces) {
+
         final List<Move> legalMoves = new ArrayList<>();
 
         for(final Piece piece : pieces) {
+
+            Print(piece.calculateLegalMoves(this).toString());
             legalMoves.addAll(piece.calculateLegalMoves(this));
         }
 
@@ -145,6 +161,10 @@ public class Board {
         return this.whitePiece;
     }
 
+    public Iterable<Move> getAllLegalMoves() {
+        return Iterables.unmodifiableIterable(Iterables.concat(this.whitePlayer.getLegalMoves(), this.blackPlayer.getLegalMoves()));
+    }
+
     public Player whitePlayer() {
         return this.whitePlayer;
     }
@@ -161,6 +181,7 @@ public class Board {
 
         Map<Integer, Piece> boardConfig;
         Alliance nextMoveMaker;
+        Pawn enPassantPawn;
 
         public Builder() {
             this.boardConfig = new HashMap<>();
@@ -171,7 +192,7 @@ public class Board {
             return this;
         }
 
-        public Builder setMoveMaker(final Alliance alliance) {
+        public Builder setMoveMaker(final Alliance nextMoveMaker) {
             this.nextMoveMaker = nextMoveMaker;
 
             return this;
@@ -181,5 +202,8 @@ public class Board {
             return new Board(this);
         }
 
+        public void setEnPassantPawn(Pawn enPassantPawn) {
+            this.enPassantPawn = enPassantPawn;
+        }
     }
 }

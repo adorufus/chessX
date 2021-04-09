@@ -19,12 +19,12 @@ public abstract class Player {
 
     Player(final Board board, final Collection<Move> legalMoves, final Collection<Move> opponentMoves){
         this.board = board;
-        this.playerKing = estabilishKing();
+        this.playerKing = establishKing();
         this.legalMoves = legalMoves;
         this.isInCheck = !Player.calculateAttacksOnTile(this.playerKing.getPiecePosition(), opponentMoves).isEmpty();
     }
 
-    private static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentMoves) {
+    public static Collection<Move> calculateAttacksOnTile(int piecePosition, Collection<Move> opponentMoves) {
         final List<Move> attackMove = new ArrayList<>();
 
         for(final Move move : opponentMoves) {
@@ -36,7 +36,7 @@ public abstract class Player {
         return ImmutableList.copyOf(attackMove);
     }
 
-    private King estabilishKing() {
+    private King establishKing() {
         for(final Piece piece : getActivePieces()) {
             if(piece.getPieceType().isKing()) {
                 return (King) piece;
@@ -95,7 +95,7 @@ public abstract class Player {
         return new MoveTransition(this.board, move, MoveStatus.DONE);
     }
 
-    private Collection<Move> getLegalMoves() {
+    public Collection<Move> getLegalMoves() {
         return this.legalMoves;
     }
 
@@ -106,5 +106,6 @@ public abstract class Player {
     public abstract Collection<Piece> getActivePieces();
     public abstract Alliance getAlliance();
     public abstract Player getOpponent();
+    public abstract Collection<Move> calculateKingCastles(Collection<Move> playerLegals, Collection<Move> opponentLegals);
 
 }

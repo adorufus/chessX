@@ -58,6 +58,11 @@ public class Knight extends Piece {
         return ImmutableList.copyOf(legalMoves);
     }
 
+    @Override
+    public Piece movePiece(Move move) {
+        return new Knight(move.getDestinationCoord(), move.getMovedPiece().pieceAlliance);
+    }
+
     private static boolean isFirstColumnExclusion(final int currentPos, final int candidateOffset) {
         return FIRST_COLUMN[currentPos] && (candidateOffset == -17 || candidateOffset == -10 || candidateOffset == 6 || candidateOffset == 15);
     }

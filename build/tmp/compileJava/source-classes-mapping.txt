@@ -1,13 +1,14 @@
-okta/chessx/engine/Alliance.java
- okta.chessx.engine.Alliance
- okta.chessx.engine.Alliance$1
- okta.chessx.engine.Alliance$2
-okta/chessx/engine/Utils.java
- okta.chessx.engine.Utils
 okta/chessx/engine/BoardUtils.java
  okta.chessx.engine.BoardUtils
-okta/chessx/engine/ChessX.java
- okta.chessx.engine.ChessX
+okta/chessx/engine/player/MoveStatus.java
+ okta.chessx.engine.player.MoveStatus
+ okta.chessx.engine.player.MoveStatus$1
+ okta.chessx.engine.player.MoveStatus$2
+ okta.chessx.engine.player.MoveStatus$3
+okta/chessx/engine/Utils.java
+ okta.chessx.engine.Utils
+okta/chessx/engine/gui/Table.java
+ okta.chessx.engine.gui.Table
 okta/chessx/engine/pieces/Piece.java
  okta.chessx.engine.pieces.Piece
  okta.chessx.engine.pieces.Piece$PieceType
@@ -17,9 +18,6 @@ okta/chessx/engine/pieces/Piece.java
  okta.chessx.engine.pieces.Piece$PieceType$4
  okta.chessx.engine.pieces.Piece$PieceType$5
  okta.chessx.engine.pieces.Piece$PieceType$6
-okta/chessx/engine/player/MoveStatus.java
- okta.chessx.engine.player.MoveStatus
- okta.chessx.engine.player.MoveStatus$1
 okta/chessx/engine/pieces/Queen.java
  okta.chessx.engine.pieces.Queen
 okta/chessx/engine/board/Board.java
@@ -29,25 +27,40 @@ okta/chessx/engine/player/MoveTransition.java
  okta.chessx.engine.player.MoveTransition
 okta/chessx/engine/player/WhitePlayer.java
  okta.chessx.engine.player.WhitePlayer
+okta/chessx/engine/Alliance.java
+ okta.chessx.engine.Alliance
+ okta.chessx.engine.Alliance$1
+ okta.chessx.engine.Alliance$2
+okta/chessx/engine/board/Move.java
+ okta.chessx.engine.board.Move
+ okta.chessx.engine.board.Move$AttackMove
+ okta.chessx.engine.board.Move$CastleMove
+ okta.chessx.engine.board.Move$KingSideCastleMove
+ okta.chessx.engine.board.Move$MajorMove
+ okta.chessx.engine.board.Move$MoveFactory
+ okta.chessx.engine.board.Move$NullMove
+ okta.chessx.engine.board.Move$PawnAttackMove
+ okta.chessx.engine.board.Move$PawnEnPassantMove
+ okta.chessx.engine.board.Move$PawnJump
+ okta.chessx.engine.board.Move$PawnMove
+ okta.chessx.engine.board.Move$QueenSideCastleMove
 okta/chessx/engine/player/Player.java
  okta.chessx.engine.player.Player
 okta/chessx/engine/player/BlackPlayer.java
  okta.chessx.engine.player.BlackPlayer
-okta/chessx/engine/board/Move.java
- okta.chessx.engine.board.Move
- okta.chessx.engine.board.Move$AttackMove
- okta.chessx.engine.board.Move$MajorMove
 okta/chessx/engine/pieces/Knight.java
  okta.chessx.engine.pieces.Knight
 okta/chessx/engine/pieces/Pawn.java
  okta.chessx.engine.pieces.Pawn
 okta/chessx/engine/pieces/Bishop.java
  okta.chessx.engine.pieces.Bishop
+okta/chessx/engine/ChessX.java
+ okta.chessx.engine.ChessX
+okta/chessx/engine/pieces/King.java
+ okta.chessx.engine.pieces.King
 okta/chessx/engine/board/Tile.java
  okta.chessx.engine.board.Tile
  okta.chessx.engine.board.Tile$EmptyTile
  okta.chessx.engine.board.Tile$OccupiedTile
-okta/chessx/engine/pieces/King.java
- okta.chessx.engine.pieces.King
 okta/chessx/engine/pieces/Rook.java
  okta.chessx.engine.pieces.Rook

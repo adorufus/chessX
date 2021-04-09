@@ -55,6 +55,11 @@ public class Rook extends Piece{
     }
 
     @Override
+    public Piece movePiece(Move move) {
+        return new Rook(move.getDestinationCoord(), move.getMovedPiece().pieceAlliance);
+    }
+
+    @Override
     public String toString() {
         return PieceType.ROOK.toString();
     }

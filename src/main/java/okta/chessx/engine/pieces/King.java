@@ -1,5 +1,6 @@
 package okta.chessx.engine.pieces;
 
+import com.google.common.collect.ImmutableList;
 import okta.chessx.engine.Alliance;
 import okta.chessx.engine.board.Board;
 import okta.chessx.engine.board.Move;
@@ -12,7 +13,7 @@ public class King extends Piece{
 
     private final static int[] CANDIDATE_MOVE_COORDINATE = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    public King(int piecePosition, Alliance pieceAlliance) {
+    public King(final int piecePosition, final Alliance pieceAlliance) {
         super(PieceType.KING, piecePosition, pieceAlliance);
     }
 
@@ -43,7 +44,12 @@ public class King extends Piece{
             }
         }
 
-        return null;
+        return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public Piece movePiece(Move move) {
+        return new King(move.getDestinationCoord(), move.getMovedPiece().pieceAlliance);
     }
 
     @Override
