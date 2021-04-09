@@ -12,7 +12,7 @@ import java.util.*;
 
 import static okta.chessx.engine.BoardUtils.NUM_TILES;
 import static okta.chessx.engine.BoardUtils.NUM_TILES_PER_ROW;
-import static okta.chessx.engine.Utils.Print;
+import static okta.chessx.engine.utils.Utils.Print;
 
 public class Board {
 

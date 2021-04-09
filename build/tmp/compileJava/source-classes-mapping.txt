@@ -1,14 +1,3 @@
-okta/chessx/engine/BoardUtils.java
- okta.chessx.engine.BoardUtils
-okta/chessx/engine/player/MoveStatus.java
- okta.chessx.engine.player.MoveStatus
- okta.chessx.engine.player.MoveStatus$1
- okta.chessx.engine.player.MoveStatus$2
- okta.chessx.engine.player.MoveStatus$3
-okta/chessx/engine/Utils.java
- okta.chessx.engine.Utils
-okta/chessx/engine/gui/Table.java
- okta.chessx.engine.gui.Table
 okta/chessx/engine/pieces/Piece.java
  okta.chessx.engine.pieces.Piece
  okta.chessx.engine.pieces.Piece$PieceType
@@ -18,8 +7,15 @@ okta/chessx/engine/pieces/Piece.java
  okta.chessx.engine.pieces.Piece$PieceType$4
  okta.chessx.engine.pieces.Piece$PieceType$5
  okta.chessx.engine.pieces.Piece$PieceType$6
+okta/chessx/engine/player/MoveStatus.java
+ okta.chessx.engine.player.MoveStatus
+ okta.chessx.engine.player.MoveStatus$1
+ okta.chessx.engine.player.MoveStatus$2
+ okta.chessx.engine.player.MoveStatus$3
 okta/chessx/engine/pieces/Queen.java
  okta.chessx.engine.pieces.Queen
+okta/chessx/engine/BoardUtils.java
+ okta.chessx.engine.BoardUtils
 okta/chessx/engine/board/Board.java
  okta.chessx.engine.board.Board
  okta.chessx.engine.board.Board$Builder
@@ -27,6 +23,21 @@ okta/chessx/engine/player/MoveTransition.java
  okta.chessx.engine.player.MoveTransition
 okta/chessx/engine/player/WhitePlayer.java
  okta.chessx.engine.player.WhitePlayer
+okta/chessx/engine/utils/Utils.java
+ okta.chessx.engine.utils.Utils
+okta/chessx/engine/gui/Table.java
+ okta.chessx.engine.gui.Table
+ okta.chessx.engine.gui.Table$1
+ okta.chessx.engine.gui.Table$2
+ okta.chessx.engine.gui.Table$3
+ okta.chessx.engine.gui.Table$4
+ okta.chessx.engine.gui.Table$BoardDirection
+ okta.chessx.engine.gui.Table$BoardDirection$1
+ okta.chessx.engine.gui.Table$BoardDirection$2
+ okta.chessx.engine.gui.Table$BoardPanel
+ okta.chessx.engine.gui.Table$TilePanel
+ okta.chessx.engine.gui.Table$TilePanel$1
+ okta.chessx.engine.gui.Table$TilePanel$1$1
 okta/chessx/engine/Alliance.java
  okta.chessx.engine.Alliance
  okta.chessx.engine.Alliance$1

@@ -3,7 +3,7 @@ package okta.chessx.engine;
 import okta.chessx.engine.board.Board;
 import okta.chessx.engine.gui.Table;
 
-import static okta.chessx.engine.Utils.Print;
+import static okta.chessx.engine.utils.Utils.Print;
 
 public class ChessX {
     public static void main(String[] args) {

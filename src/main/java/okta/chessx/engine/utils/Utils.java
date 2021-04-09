@@ -1,4 +1,4 @@
-package okta.chessx.engine;
+package okta.chessx.engine.utils;
 
 public class Utils {
 
