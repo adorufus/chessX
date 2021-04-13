@@ -6,7 +6,7 @@ import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
 import java.util.Map;
 
-import static okta.chessx.engine.BoardUtils.NUM_TILES;
+import static okta.chessx.engine.board.BoardUtils.NUM_TILES;
 
 public abstract class Tile {
 
@@ -35,6 +35,10 @@ public abstract class Tile {
     public abstract boolean isTileOccupied();
 
     public abstract Piece getPiece();
+
+    public int getTileCoordinate() {
+        return this.tileCoords;
+    }
 
     public static final class EmptyTile extends Tile {
         EmptyTile(final int coords)  {
@@ -73,7 +77,7 @@ public abstract class Tile {
 
         @Override
         public boolean isTileOccupied() {
-            return false;
+            return true;
         }
 
         @Override
