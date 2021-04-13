@@ -6,7 +6,7 @@ import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
 import java.util.Map;
 
-import static okta.chessx.engine.BoardUtils.NUM_TILES;
+import static okta.chessx.engine.board.BoardUtils.NUM_TILES;
 
 public abstract class Tile {
 
