@@ -1,7 +1,7 @@
-package okta.chessx.engine.gui;
+package okta.chessx.example;
 
 import okta.chessx.engine.Alliance;
-import okta.chessx.engine.gui.Table.PlayerType;
+import okta.chessx.example.Table.PlayerType;
 import okta.chessx.engine.player.Player;
 
 import javax.swing.*;

@@ -6,8 +6,7 @@ import okta.chessx.engine.board.Board;
 import okta.chessx.engine.board.BoardUtils;
 import okta.chessx.engine.board.Move;
 import okta.chessx.engine.board.Move.MoveFactory;
-import okta.chessx.engine.gui.Table;
-import okta.chessx.engine.gui.Table.MoveLog;
+import okta.chessx.example.Table.MoveLog;
 
 import java.io.*;
 import java.text.SimpleDateFormat;

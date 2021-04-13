@@ -1,8 +1,8 @@
-package okta.chessx.engine.gui;
+package okta.chessx.example;
 
 import com.google.common.primitives.Ints;
 import okta.chessx.engine.board.Move;
-import okta.chessx.engine.gui.Table.MoveLog;
+import okta.chessx.example.Table.MoveLog;
 import okta.chessx.engine.pieces.Piece;
 
 import javax.imageio.ImageIO;

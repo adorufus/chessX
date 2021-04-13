@@ -1,7 +1,7 @@
-package okta.chessx.engine;
+package okta.chessx.example;
 
 import okta.chessx.engine.board.Board;
-import okta.chessx.engine.gui.Table;
+import okta.chessx.example.Table;
 
 import static okta.chessx.engine.utils.Utils.Print;
 

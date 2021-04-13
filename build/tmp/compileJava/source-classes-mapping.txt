@@ -5,6 +5,7 @@ okta/chessx/pgn/PGNPersistence.java
  okta.chessx.pgn.PGNPersistence
 okta/chessx/engine/board/Board.java
  okta.chessx.engine.board.Board
+ okta.chessx.engine.board.Board$1
  okta.chessx.engine.board.Board$Builder
 okta/chessx/engine/bitboards/Move.java
  okta.chessx.engine.bitboards.Move
@@ -24,8 +25,8 @@ okta/chessx/engine/player/BlackPlayer.java
  okta.chessx.engine.player.BlackPlayer
 okta/chessx/pgn/ParsePGNException.java
  okta.chessx.pgn.ParsePGNException
-okta/chessx/engine/pieces/King.java
- okta.chessx.engine.pieces.King
+okta/chessx/pgn/PGNUtilities.java
+ okta.chessx.pgn.PGNUtilities
 okta/chessx/pgn/PGNGameTags.java
  okta.chessx.pgn.PGNGameTags
  okta.chessx.pgn.PGNGameTags$TagsBuilder
@@ -40,6 +41,7 @@ okta/chessx/engine/pieces/Queen.java
  okta.chessx.engine.pieces.Queen
 okta/chessx/engine/player/ai/AlphaBetaWithMoveOrdering.java
  okta.chessx.engine.player.ai.AlphaBetaWithMoveOrdering
+ okta.chessx.engine.player.ai.AlphaBetaWithMoveOrdering$1
  okta.chessx.engine.player.ai.AlphaBetaWithMoveOrdering$MoveSorter
  okta.chessx.engine.player.ai.AlphaBetaWithMoveOrdering$MoveSorter$1
  okta.chessx.engine.player.ai.AlphaBetaWithMoveOrdering$MoveSorter$2
@@ -48,12 +50,12 @@ okta/chessx/engine/player/ai/MiniMax.java
  okta.chessx.engine.player.ai.MiniMax$FreqTableRow
 okta/chessx/pgn/MySqlGamePersistence.java
  okta.chessx.pgn.MySqlGamePersistence
+okta/chessx/example/ChessX.java
+ okta.chessx.example.ChessX
 okta/chessx/engine/player/ai/MoveOrdering.java
  okta.chessx.engine.player.ai.MoveOrdering
  okta.chessx.engine.player.ai.MoveOrdering$1
  okta.chessx.engine.player.ai.MoveOrdering$MoveOrderEntry
-okta/chessx/pgn/Playable.java
- okta.chessx.pgn.Playable
 okta/chessx/engine/player/ai/StandardBoardEvaluator.java
  okta.chessx.engine.player.ai.StandardBoardEvaluator
 okta/chessx/engine/Alliance.java
@@ -64,6 +66,7 @@ okta/chessx/engine/player/ai/BoardEvaluator.java
  okta.chessx.engine.player.ai.BoardEvaluator
 okta/chessx/engine/board/Move.java
  okta.chessx.engine.board.Move
+ okta.chessx.engine.board.Move$1
  okta.chessx.engine.board.Move$AttackMove
  okta.chessx.engine.board.Move$CastleMove
  okta.chessx.engine.board.Move$KingSideCastleMove
@@ -89,30 +92,45 @@ okta/chessx/engine/pieces/Bishop.java
  okta.chessx.engine.pieces.Bishop
 okta/chessx/pgn/FenUtilities.java
  okta.chessx.pgn.FenUtilities
-okta/chessx/engine/gui/DebugPanel.java
- okta.chessx.engine.gui.DebugPanel
-okta/chessx/engine/board/BoardUtils.java
- okta.chessx.engine.board.BoardUtils
+okta/chessx/example/Table.java
+ okta.chessx.example.Table
+ okta.chessx.example.Table$1
+ okta.chessx.example.Table$AIThinkTank
+ okta.chessx.example.Table$BoardDirection
+ okta.chessx.example.Table$BoardDirection$1
+ okta.chessx.example.Table$BoardDirection$2
+ okta.chessx.example.Table$BoardPanel
+ okta.chessx.example.Table$MoveLog
+ okta.chessx.example.Table$PlayerType
+ okta.chessx.example.Table$TableGameAIWatcher
+ okta.chessx.example.Table$TilePanel
+ okta.chessx.example.Table$TilePanel$1
 okta/chessx/engine/player/ai/PawnStructureAnalyzer.java
  okta.chessx.engine.player.ai.PawnStructureAnalyzer
 okta/chessx/engine/pieces/Knight.java
  okta.chessx.engine.pieces.Knight
-okta/chessx/pgn/Game.java
- okta.chessx.pgn.Game
 okta/chessx/engine/pieces/PieceUtils.java
  okta.chessx.engine.pieces.PieceUtils
+okta/chessx/example/GameSetup.java
+ okta.chessx.example.GameSetup
+ okta.chessx.example.GameSetup$1
+ okta.chessx.example.GameSetup$2
 okta/chessx/engine/board/Tile.java
  okta.chessx.engine.board.Tile
+ okta.chessx.engine.board.Tile$1
  okta.chessx.engine.board.Tile$EmptyTile
  okta.chessx.engine.board.Tile$OccupiedTile
 okta/chessx/engine/pieces/Rook.java
  okta.chessx.engine.pieces.Rook
-okta/chessx/engine/board/MoveTransition.java
- okta.chessx.engine.board.MoveTransition
 okta/chessx/pgn/InvalidGame.java
  okta.chessx.pgn.InvalidGame
+okta/chessx/example/TakenPiecesPanel.java
+ okta.chessx.example.TakenPiecesPanel
+ okta.chessx.example.TakenPiecesPanel$1
+ okta.chessx.example.TakenPiecesPanel$2
 okta/chessx/engine/bitboards/BitBoard.java
  okta.chessx.engine.bitboards.BitBoard
+ okta.chessx.engine.bitboards.BitBoard$1
  okta.chessx.engine.bitboards.BitBoard$Piece
  okta.chessx.engine.bitboards.BitBoard$Piece$1
  okta.chessx.engine.bitboards.BitBoard$Piece$2
@@ -124,6 +142,7 @@ okta/chessx/engine/bitboards/BitBoard.java
  okta.chessx.engine.bitboards.BitBoard$Piece$8
 okta/chessx/engine/player/ai/StockAlphaBeta.java
  okta.chessx.engine.player.ai.StockAlphaBeta
+ okta.chessx.engine.player.ai.StockAlphaBeta$1
  okta.chessx.engine.player.ai.StockAlphaBeta$MoveSorter
  okta.chessx.engine.player.ai.StockAlphaBeta$MoveSorter$1
  okta.chessx.engine.player.ai.StockAlphaBeta$MoveSorter$2
@@ -131,6 +150,7 @@ okta/chessx/engine/pieces/Pawn.java
  okta.chessx.engine.pieces.Pawn
 okta/chessx/engine/player/ai/IterativeDeepening.java
  okta.chessx.engine.player.ai.IterativeDeepening
+ okta.chessx.engine.player.ai.IterativeDeepening$1
  okta.chessx.engine.player.ai.IterativeDeepening$MoveOrderingBuilder
  okta.chessx.engine.player.ai.IterativeDeepening$MoveScoreRecord
  okta.chessx.engine.player.ai.IterativeDeepening$MoveSorter
@@ -141,32 +161,19 @@ okta/chessx/engine/player/ai/IterativeDeepening.java
  okta.chessx.engine.player.ai.IterativeDeepening$Ordering$1$1
  okta.chessx.engine.player.ai.IterativeDeepening$Ordering$2
  okta.chessx.engine.player.ai.IterativeDeepening$Ordering$2$1
-okta/chessx/engine/gui/GameHistoryPanel.java
- okta.chessx.engine.gui.GameHistoryPanel
- okta.chessx.engine.gui.GameHistoryPanel$DataModel
- okta.chessx.engine.gui.GameHistoryPanel$Row
-okta/chessx/engine/gui/TakenPiecesPanel.java
- okta.chessx.engine.gui.TakenPiecesPanel
- okta.chessx.engine.gui.TakenPiecesPanel$1
- okta.chessx.engine.gui.TakenPiecesPanel$2
-okta/chessx/engine/ChessX.java
- okta.chessx.engine.ChessX
-okta/chessx/pgn/PGNUtilities.java
- okta.chessx.pgn.PGNUtilities
-okta/chessx/engine/gui/Table.java
- okta.chessx.engine.gui.Table
- okta.chessx.engine.gui.Table$1
- okta.chessx.engine.gui.Table$AIThinkTank
- okta.chessx.engine.gui.Table$BoardDirection
- okta.chessx.engine.gui.Table$BoardDirection$1
- okta.chessx.engine.gui.Table$BoardDirection$2
- okta.chessx.engine.gui.Table$BoardPanel
- okta.chessx.engine.gui.Table$MoveLog
- okta.chessx.engine.gui.Table$PlayerType
- okta.chessx.engine.gui.Table$TableGameAIWatcher
- okta.chessx.engine.gui.Table$TilePanel
- okta.chessx.engine.gui.Table$TilePanel$1
-okta/chessx/engine/gui/GameSetup.java
- okta.chessx.engine.gui.GameSetup
- okta.chessx.engine.gui.GameSetup$1
- okta.chessx.engine.gui.GameSetup$2
+okta/chessx/engine/board/BoardUtils.java
+ okta.chessx.engine.board.BoardUtils
+okta/chessx/example/GameHistoryPanel.java
+ okta.chessx.example.GameHistoryPanel
+ okta.chessx.example.GameHistoryPanel$DataModel
+ okta.chessx.example.GameHistoryPanel$Row
+okta/chessx/pgn/Playable.java
+ okta.chessx.pgn.Playable
+okta/chessx/engine/pieces/King.java
+ okta.chessx.engine.pieces.King
+okta/chessx/pgn/Game.java
+ okta.chessx.pgn.Game
+okta/chessx/engine/board/MoveTransition.java
+ okta.chessx.engine.board.MoveTransition
+okta/chessx/example/DebugPanel.java
+ okta.chessx.example.DebugPanel

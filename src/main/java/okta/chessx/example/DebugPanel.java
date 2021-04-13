@@ -1,4 +1,4 @@
-package okta.chessx.engine.gui;
+package okta.chessx.example;
 
 import javax.swing.*;
 import java.awt.*;

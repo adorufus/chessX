@@ -1,4 +1,4 @@
-package okta.chessx.engine.gui;
+package okta.chessx.example;
 
 import com.google.common.collect.Lists;
 import okta.chessx.engine.board.*;
@@ -23,7 +23,6 @@ import java.util.List;
 
 import static javax.swing.JDialog.setDefaultLookAndFeelDecorated;
 import static javax.swing.SwingUtilities.*;
-import static okta.chessx.engine.board.BoardUtils.*;
 import static okta.chessx.pgn.PGNUtilities.persistPGNFile;
 import static okta.chessx.pgn.PGNUtilities.writeGameToPGNFile;
 

@@ -1,8 +1,8 @@
-package okta.chessx.engine.gui;
+package okta.chessx.example;
 
 import okta.chessx.engine.board.Board;
 import okta.chessx.engine.board.Move;
-import okta.chessx.engine.gui.Table.MoveLog;
+import okta.chessx.example.Table.MoveLog;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
