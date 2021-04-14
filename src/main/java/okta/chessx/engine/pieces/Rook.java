@@ -6,8 +6,7 @@ import okta.chessx.engine.board.BoardUtils;
 import okta.chessx.engine.board.Move;
 import okta.chessx.engine.board.Move.MajorAttackMove;
 import okta.chessx.engine.board.Move.MajorMove;
-import okta.chessx.engine.board.Tile;
-import com.google.common.collect.ImmutableList;
+//import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
 import java.util.Collection;

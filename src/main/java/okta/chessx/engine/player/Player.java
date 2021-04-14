@@ -1,7 +1,7 @@
 package okta.chessx.engine.player;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterables;
+//import com.google.common.collect.ImmutableList;
+//import com.google.common.collect.Iterables;
 import okta.chessx.engine.Alliance;
 import okta.chessx.engine.board.Board;
 import okta.chessx.engine.board.Move;

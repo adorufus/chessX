@@ -1,13 +1,11 @@
 package okta.chessx.engine.player;
 
-import com.google.common.collect.ImmutableList;
 import okta.chessx.engine.Alliance;
 import okta.chessx.engine.board.Board;
 import okta.chessx.engine.board.BoardUtils;
 import okta.chessx.engine.board.Move;
 import okta.chessx.engine.board.Move.KingSideCastleMove;
 import okta.chessx.engine.board.Move.QueenSideCastleMove;
-import okta.chessx.engine.board.Tile;
 import okta.chessx.engine.pieces.Piece;
 import okta.chessx.engine.pieces.Rook;
 
